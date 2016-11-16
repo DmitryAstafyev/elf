@@ -29,14 +29,13 @@
                 }
             }]
         },
-        /*
         plugins: [
             new webpack.optimize.UglifyJsPlugin({
                 mangle: {
                     except: ['modules', 'exports', 'require']
                 }
             })
-        ],*/
+        ],
     };
 
 gulp.task('less', function () {
