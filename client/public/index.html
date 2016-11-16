@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Elf</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,700,300italic,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+    <template id="wrapper">
+        <div class="wrapper-background" id="{{id}}">
+            <div class="vertical-out">
+                <div class="vertical-in">
+                    <div class="wrapper">
+                        <div class="wrapper-align">
+                            <div class="wrapper-content">{{content}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="dialog">
+        <div class="dialog">
+            <div class="title">{{title}}</div>
+            <div class="content">{{content}}</div>
+            <div class="buttons">{{buttons}}</div>
+        </div>
+    </template>
+    
+    <template id="button">
+        <a id="{{id}}" class="button">{{caption}}</a>
+    </template>
+    
+    <template id="progress">
+        <div class="progress" id="{{id}}">
+            <p class="caption">{{caption}}</p>
+            <div class="particle" data-addition-type="0"></div>
+            <div class="particle" data-addition-type="1"></div>
+            <div class="particle" data-addition-type="2"></div>
+            <div class="particle" data-addition-type="3"></div>
+            <div class="particle" data-addition-type="4"></div>
+            <div class="particle" data-addition-type="5"></div>
+        </div>
+    </template>
+    <template id="json-results">
+        <div class="json-results" id="{{id}}">{{content}}</div>
+    </template>
+    <template id="property">
+        <p class="property"><span>{{name}}</span><span class="{{type}}">{{value}}</span></p>
+    </template>
+    <template id="property-sub">
+        <input id="{{id}}" class="property-sub" type="checkbox" />
+        <label class="property-sub" for="{{id}}">
+            <span class="property-sub"></span>
+        </label>
+        <div class="property-sub">
+            {{list}}
+        </div>
+    </template>
+
+    <template id="map">
+        <div class="map" id="{{id}}">
+            <div class="sections">
+                <p class="caption">Sections</p>
+                <ul>
+                    {{sections}}
+                </ul>
+            </div>
+            <div class="memories">
+                <p class="caption">Memory types</p>
+                <ul>
+                    {{memories}}
+                </ul>
+            </div>
+            <div class="details">
+                <p class="caption">Processes</p>
+                <div class="processes">Select some section or memory type
+                </div>
+            </div>
+            <a class="shake">Turn <span>ON</span> shake (binding data demonstration)</a>
+        </div>
+    </template>
+
+    <template id="section">
+        <li class="section" id="{{id}}">
+            <p><span class="count"></span>; {{memType}}: <span class="memory"></span> bytes; <b>{{name}}</b>; </p>
+            <span class="marker"></span>
+        </li>
+    </template>
+
+</body>
+</html>

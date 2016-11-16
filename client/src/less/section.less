@@ -1,0 +1,104 @@
+﻿.map{
+    position:absolute;
+    width:100%;
+    height:100%;
+    .caption{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1rem;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        overflow: hidden;
+        padding: 0.5rem;
+        margin: 0;
+        line-height: 1.3rem;
+        background: rgb(200,200,200);
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    }
+    .sections, .memories{
+        position:absolute;
+        width:50%;
+        height:70%;
+        overflow:hidden;
+        ul{
+            position:absolute;
+            display:block;
+            width:100%;
+            top:2rem;
+            bottom:0;
+            list-style:none;
+            overflow-x:hidden;
+            overflow-y:scroll;
+            margin: 0.1rem 0 0 0;
+            padding:0;
+            .section{
+                position:relative;
+                display:block;
+                width:100%;
+                margin:0 0 0 1rem;
+                padding:0.3rem 0rem;
+                cursor:pointer;
+                &:hover{
+                    background:rgb(255,255,255);
+                }
+                &.inactive{
+                    opacity:0.4;
+                }
+                p{
+                    padding:0;
+                    margin:0;
+                }
+                .marker{
+                    position:relative;
+                    display:block;
+                    height:0.2rem;
+                    background:green;
+                    -moz-transition: all ease-in-out 100ms;
+                    -o-transition: all ease-in-out 100ms;
+                    -webkit-transition: all ease-in-out 100ms;
+                    transition: all ease-in-out 100ms;
+                }
+            }
+        }
+    }
+    .memories{
+        width:50%;
+        height:30%;
+        top:70%;
+        left:0;
+    }
+    .details{
+        position:absolute;
+        width:50%;
+        top:0;
+        height:100%;
+        left:50%;
+        overflow:hidden;
+        .processes{
+            position:absolute;
+            display:block;
+            width:100%;
+            top:2rem;
+            bottom:0;
+            overflow-x:hidden;
+            overflow-y:scroll;
+            margin: 0.1rem 0 0 0;
+            padding:0;
+        }
+    }
+    .shake{
+        position:absolute;
+        display:block;
+        bottom:2rem;
+        right:2rem;
+        margin:0;
+        padding:0.5rem 1rem;
+        background:rgb(240,240,240);
+        border:1px solid rgb(200,200,200);
+        cursor:pointer;
+        &:hover{
+            background:rgb(255,255,255);
+        }
+    }
+}
